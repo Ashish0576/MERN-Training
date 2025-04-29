@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Image Toggle</title>
+  <style>
+    img {
+      width: 300px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="toggleImage" src="b&w.png" alt="Toggle Image">
+
+  <script>
+    const image = document.getElementById("toggleImage");
+    let isColor = false;
+
+    image.addEventListener("click", () => {
+      if (isColor) {
+        image.src = "b&w.png";
+      } else {
+        image.src = "color.png";
+      }
+      isColor = !isColor;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>color change</title>
+  <style>
+    img {
+      width: 300px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="toggleImage" src="b&w.png" alt="Toggle Image">
+
+  <script>
+    let image = document.getElementById("toggleImage");
+
+    image.addEventListener("mouseenter", () => {
+      image.src = "color.png";  
+    });
+
+    image.addEventListener("mouseleave", () => {
+      image.src = "b&w.png";  
+    });
+  </script>
+
+</body>
+</html>

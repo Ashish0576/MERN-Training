@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ID Card Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .form {
+      margin-bottom: 20px;
+    }
+    .id-card {
+      width: 300px;
+      padding: 20px;
+      border: 2px solid #000;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .id-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form">
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <input type="text" id="course" placeholder="Enter your course"><br><br>
+    <input type="text" id="college" placeholder="Enter your college"><br><br>
+    <input type="text" id="imgUrl" placeholder="Enter image URL"><br><br>
+    <button onclick="generateIDCard()">Generate ID Card</button>
+  </div>
+
+  <div class="id-card" id="idCard" style="display: none;">
+    <img id="profilePic" src="" alt="Profile Picture">
+    <h2 id="cardName"></h2>
+    <p><strong>Course:</strong> <span id="cardCourse"></span></p>
+    <p><strong>College:</strong> <span id="cardCollege"></span></p>
+  </div>
+
+
+</body>
+</html>
