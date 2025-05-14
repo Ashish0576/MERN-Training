@@ -45,6 +45,30 @@
     <p><strong>College:</strong> <span id="cardCollege"></span></p>
   </div>
 
+  <script>
+    function generateIDCard() {
+      
+      const name = document.getElementById('name').value;
+      const course = document.getElementById('course').value;
+      const college = document.getElementById('college').value;
+      const imgUrl = document.getElementById('imgUrl').value;
+
+      
+      if (!name || !course || !college || !imgUrl) {
+        alert("Please fill in all fields!");
+        return;
+      }
+
+      
+      document.getElementById('cardName').textContent = name;
+      document.getElementById('cardCourse').textContent = course;
+      document.getElementById('cardCollege').textContent = college;
+      document.getElementById('profilePic').src = imgUrl;
+
+      
+      document.getElementById('idCard').style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
